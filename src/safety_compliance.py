@@ -11,7 +11,7 @@ def ensure_safety(frames):
     return safety_reports
 
 def analyze_safety(detections):
-    required_equipment = ['helmet', 'vest', 'gloves']
+    required_equipment = ['helmet', 'vest', 'gloves'] # from c script previously
     present = {item: False for item in required_equipment}
     for det in detections:
         if det['class'] in required_equipment:
